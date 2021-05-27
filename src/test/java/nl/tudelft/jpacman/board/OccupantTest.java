@@ -31,9 +31,9 @@ class OccupantTest {
      */
     @Test
     void noStartSquare() {
-        // Remove the following placeholder(删除下列占位符):
-        //测试断言一个单元开始时没有正方形，也就是说，一个单元开始时“没有正方形”
-
+        /* Remove the following placeholder(删除下列占位符):
+        *测试断言一个单元开始时没有正方形，也就是说，一个单元开始时“没有正方形”
+        */
         assertThat(unit).isNotNull();
         assertThat(unit.hasSquare()).isFalse();
     }
@@ -44,11 +44,12 @@ class OccupantTest {
      */
     @Test
     void testOccupy() {
-        // Remove the following placeholder:
-        //验证单元在被占用后确实有目标正方形作为它的基数。换句话说，如果一个单元被一个(ny)基本方块占据，那么一个应该包含另一个
+        /* Remove the following placeholder:
+        *验证单元在被占用后确实有目标正方形作为它的基数。换句话说，如果一个单元被一个(ny)基本方块占据，那么一个应该包含另一个
+
+         */
         Square square = new BasicSquare();
         unit.occupy(square);
-//        assertThat(unit).isNotNull();
         assertThat(unit.getSquare()).isEqualTo(square);
         assertThat(square.getOccupants()).contains(unit);
     }
@@ -59,13 +60,14 @@ class OccupantTest {
      */
     @Test
     void testReoccupy() {
-        // Remove the following placeholder:
-        //验证单元在两次占用之后确实有目标正方形作为它的基数。如果这个单元被另一个方块占用了，会发生什么?
+        /* Remove the following placeholder:
+        *验证单元在两次占用之后确实有目标正方形作为它的基数。如果这个单元被另一个方块占用了，会发生什么?
+
+         */
         Square square = new BasicSquare();
         unit.occupy(square);
         unit.occupy(square);
         assertThat(unit.getSquare()).isEqualTo(square);
         assertThat(square.getOccupants()).contains(unit).containsOnlyOnce(unit);
-//        assertThat(unit).isNotNull();
     }
 }

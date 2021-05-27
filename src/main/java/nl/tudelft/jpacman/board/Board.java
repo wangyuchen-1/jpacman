@@ -89,6 +89,7 @@ public class Board {
      * @return <code>true</code> iff the position is on this board.
      */
     public boolean withinBorders(int x, int y) {
+
         return x >= 0 && x < getWidth() && y >= 0 && y < getHeight();
     }
 }
